@@ -1,0 +1,111 @@
+describe('Transaction Test - SauceDemo',() => {
+   beforeEach(() => {
+    cy.visit('https://www.saucedemo.com/v1/index.html')
+   }) 
+
+    //Melakukan Transaksi dengan 1 produk
+    it('Test transaction 1 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+    //Melakukan Transaksi dengan 2 produk
+    it('Test transaction 2 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+    //Melakukan Transaksi dengan 3 produk
+    it('Test transaction 3 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+    //Melakukan Transaksi dengan 4 produk
+    it('Test transaction 4 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+    //Melakukan Transaksi dengan 5 produk
+    it('Test transaction 5 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('button.btn_inventory').eq(4).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+    //Melakukan Transaksi dengan 6 produk
+    it('Test transaction 6 product',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('button.btn_inventory').eq(4).click()
+    cy.get('button.btn_inventory').eq(5).click()
+    cy.get('.shopping_cart_link').click()   
+    cy.get('.checkout_button').click()
+    cy.get('#first-name').type('Kipli')
+    cy.get('#last-name').type('Koplo')
+    cy.get('#postal-code').type('16786')
+    cy.get('.btn_primary').click()
+    cy.get('.btn_action').click()
+    })
+
+})

@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/franskas/TestingAutomation#readme",
   "devDependencies": {
-    "cypress": "^14.5.3"
+    "cypress": "^14.5.3",
+    "cypress-mochawesome-reporter": "^4.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

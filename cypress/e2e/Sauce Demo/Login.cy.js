@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Login Test - SauceDemo', () => {
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/v1/index.html')
