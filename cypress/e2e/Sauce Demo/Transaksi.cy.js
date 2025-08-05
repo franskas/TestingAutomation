@@ -8,9 +8,9 @@ describe('Transaction Test - SauceDemo',() => {
     //Melakukan Transaksi dengan 1 produk
     it('Test transaction 1 product',() => {
     cy.get('#user-name').type('standard_user')
-    cy.get('#password').type('secret_sauce')
+    cy.get('[data-test=password]').type('secret_sauce')
     cy.get('#login-button').click()
-    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('.btn_primary.btn_inventory').eq(0).click()
     cy.get('.shopping_cart_link').click()   
     cy.get('.checkout_button').click()
     cy.get('#first-name').type('Kipli')
@@ -25,7 +25,7 @@ describe('Transaction Test - SauceDemo',() => {
     cy.get('#user-name').type('standard_user')
     cy.get('#password').type('secret_sauce')
     cy.get('#login-button').click()
-    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('.btn_primary.btn_inventory').eq(0).click()
     cy.get('button.btn_inventory').eq(1).click()
     cy.get('.shopping_cart_link').click()   
     cy.get('.checkout_button').click()
