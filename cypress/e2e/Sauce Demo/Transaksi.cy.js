@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Transaction Test - SauceDemo',() => {
    beforeEach(() => {
     cy.visit('https://www.saucedemo.com/v1/index.html')
@@ -106,6 +108,45 @@ describe('Transaction Test - SauceDemo',() => {
     cy.get('#postal-code').type('16786')
     cy.get('.btn_primary').click()
     cy.get('.btn_action').click()
+    })
+
+    //Melakukan hapus item pada list Katalog Product
+    it('Test delete product - List Katalog',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('button.btn_inventory').eq(4).click()
+    cy.get('button.btn_inventory').eq(5).click()
+    cy.get('button.btn_inventory').eq(5).click()
+    cy.get('button.btn_inventory').eq(4).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(0).click()  
+    })
+
+    //Melakukan hapus item pada list Keranjang
+    it('Test delete product - List Keranjang',() => {
+    cy.get('#user-name').type('standard_user')
+    cy.get('#password').type('secret_sauce')
+    cy.get('#login-button').click()
+    cy.get('button.btn_inventory').eq(0).click()
+    cy.get('button.btn_inventory').eq(1).click()
+    cy.get('button.btn_inventory').eq(2).click()
+    cy.get('button.btn_inventory').eq(3).click()
+    cy.get('button.btn_inventory').eq(4).click()
+    cy.get('button.btn_inventory').eq(5).click()
+    cy.get('.shopping_cart_link').click() 
+    cy.get('.btn_secondary').eq(0).click()
+    cy.get('.btn_secondary').eq(0).click()
+    cy.get('.btn_secondary').eq(0).click()
+    cy.get('.btn_secondary').eq(0).click()
+    cy.get('.btn_secondary').eq(0).click()
+    cy.get('.btn_secondary').eq(0).click()
     })
 
 })
